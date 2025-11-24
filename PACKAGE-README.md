@@ -114,15 +114,15 @@ Or in your `.csproj`:
 
 ## Documentation
 
-- 📖 [Full Documentation](https://github.com/yourusername/tailbreeze)
-- 🚀 [Getting Started Guide](https://github.com/yourusername/tailbreeze/blob/main/docs/GETTING-STARTED.md)
-- 📚 [API Reference](https://github.com/yourusername/tailbreeze/blob/main/docs/API-REFERENCE.md)
-- 💡 [Sample Projects](https://github.com/yourusername/tailbreeze/tree/main/samples)
+- 📖 [Full Documentation](https://github.com/noundry/tailbreeze)
+- 🚀 [Getting Started Guide](https://github.com/noundry/tailbreeze/blob/main/docs/GETTING-STARTED.md)
+- 📚 [API Reference](https://github.com/noundry/tailbreeze/blob/main/docs/API-REFERENCE.md)
+- 💡 [Sample Projects](https://github.com/noundry/tailbreeze/tree/main/samples)
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/tailbreeze/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/tailbreeze/discussions)
+- **Issues**: [GitHub Issues](https://github.com/noundry/tailbreeze/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/noundry/tailbreeze/discussions)
 
 ## Attribution
 
@@ -130,7 +130,7 @@ Inspired by [tailwind-dotnet](https://github.com/kallebysantos/tailwind-dotnet) 
 
 ## License
 
-MIT License - See [LICENSE](https://github.com/yourusername/tailbreeze/blob/main/LICENSE)
+MIT License - See [LICENSE](https://github.com/noundry/tailbreeze/blob/main/LICENSE)
 
 ---
 

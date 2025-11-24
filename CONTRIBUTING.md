@@ -51,7 +51,7 @@ Enhancement suggestions are welcome! Please provide:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/tailbreeze.git
+git clone https://github.com/noundry/tailbreeze.git
 cd tailbreeze
 
 # Restore dependencies

@@ -28,4 +28,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - This project is inspired by [tailwind-dotnet](https://github.com/kallebysantos/tailwind-dotnet) by Kalleby Santos
 - Enhanced with modern .NET standards, improved architecture, and additional features
 
-[1.0.0]: https://github.com/yourusername/tailbreeze/releases/tag/v1.0.0
+[1.0.0]: https://github.com/noundry/tailbreeze/releases/tag/v1.0.0

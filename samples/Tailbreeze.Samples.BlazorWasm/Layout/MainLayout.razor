@@ -1,15 +1,16 @@
-﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
+@inherits LayoutComponentBase
+
+<div class="flex h-screen bg-gray-50">
+    <div class="w-64 bg-white shadow-lg">
         <NavMenu />
     </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+    <main class="flex-1 overflow-y-auto">
+        <div class="bg-white shadow px-4 py-3">
+            <a href="https://tailwindcss.com" target="_blank" class="text-indigo-600 hover:text-indigo-800">Tailwind CSS Docs</a>
         </div>
 
-        <article class="content px-4">
+        <article class="p-6">
             @Body
         </article>
     </main>

@@ -331,9 +331,9 @@ MIT License - see LICENSE file for details
 
 ## Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/tailbreeze/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/tailbreeze/discussions)
-- **Documentation**: [Full Documentation](https://github.com/yourusername/tailbreeze/wiki)
+- **Issues**: [GitHub Issues](https://github.com/noundry/tailbreeze/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/noundry/tailbreeze/discussions)
+- **Documentation**: [Full Documentation](https://github.com/noundry/tailbreeze/wiki)
 
 ---
 

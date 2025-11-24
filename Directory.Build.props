@@ -12,8 +12,8 @@
     <Product>Tailbreeze</Product>
     <Copyright>Copyright (c) 2025 Tailbreeze Contributors. Inspired by tailwind-dotnet by Kalleby Santos.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/yourusername/tailbreeze</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/yourusername/tailbreeze</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/noundry/tailbreeze</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/noundry/tailbreeze</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>tailwindcss;tailwind;css;aspnetcore;blazor;razor;mvc;razorpages;dotnet;csharp;frontend;utility-first</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>

@@ -1,0 +1,47 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="space-y-8">
+    <div class="text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Welcome to Tailbreeze
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+            A breeze to integrate Tailwind CSS into your ASP.NET applications.
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="https://github.com/yourusername/tailbreeze" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+            <a href="https://tailwindcss.com/docs" class="text-sm font-semibold leading-6 text-gray-900">View Tailwind docs <span aria-hidden="true">→</span></a>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-lg bg-white p-6 shadow">
+            <h3 class="text-lg font-semibold text-gray-900">Easy Setup</h3>
+            <p class="mt-2 text-sm text-gray-600">Add two NuGet packages and you're ready to go. No Node.js required!</p>
+        </div>
+        <div class="rounded-lg bg-white p-6 shadow">
+            <h3 class="text-lg font-semibold text-gray-900">Hot Reload</h3>
+            <p class="mt-2 text-sm text-gray-600">Automatic CSS regeneration during development with dotnet watch.</p>
+        </div>
+        <div class="rounded-lg bg-white p-6 shadow">
+            <h3 class="text-lg font-semibold text-gray-900">Production Ready</h3>
+            <p class="mt-2 text-sm text-gray-600">Automatic minification and optimization for production builds.</p>
+        </div>
+        <div class="rounded-lg bg-white p-6 shadow">
+            <h3 class="text-lg font-semibold text-gray-900">v3 & v4 Support</h3>
+            <p class="mt-2 text-sm text-gray-600">Full support for both Tailwind CSS v3.x and v4.x.</p>
+        </div>
+        <div class="rounded-lg bg-white p-6 shadow">
+            <h3 class="text-lg font-semibold text-gray-900">Razor & Blazor</h3>
+            <p class="mt-2 text-sm text-gray-600">Works seamlessly with Razor Pages, MVC, and Blazor.</p>
+        </div>
+        <div class="rounded-lg bg-white p-6 shadow">
+            <h3 class="text-lg font-semibold text-gray-900">Modern .NET</h3>
+            <p class="mt-2 text-sm text-gray-600">Built with .NET 8, 9, and 10 using modern standards.</p>
+        </div>
+    </div>
+</div>

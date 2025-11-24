@@ -1,0 +1,32 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Tailwind version to use (3, 4, latest, or specific version like 3.4.1) -->
+    <TailbreezeTailwindVersion Condition="'$(TailbreezeTailwindVersion)' == ''">latest</TailbreezeTailwindVersion>
+
+    <!-- Input CSS file path relative to project root -->
+    <TailbreezeInputCss Condition="'$(TailbreezeInputCss)' == ''">Styles/app.css</TailbreezeInputCss>
+
+    <!-- Output CSS file path relative to wwwroot -->
+    <TailbreezeOutputCss Condition="'$(TailbreezeOutputCss)' == ''">css/app.css</TailbreezeOutputCss>
+
+    <!-- Tailwind config file path relative to project root -->
+    <TailbreezeConfigPath Condition="'$(TailbreezeConfigPath)' == ''">tailwind.config.js</TailbreezeConfigPath>
+
+    <!-- Whether to minify CSS output -->
+    <TailbreezeMinify Condition="'$(TailbreezeMinify)' == ''">false</TailbreezeMinify>
+
+    <!-- Whether to minify CSS on publish -->
+    <TailbreezeMinifyOnPublish Condition="'$(TailbreezeMinifyOnPublish)' == ''">true</TailbreezeMinifyOnPublish>
+
+    <!-- Whether to automatically install Tailwind CLI -->
+    <TailbreezeAutoInstall Condition="'$(TailbreezeAutoInstall)' == ''">true</TailbreezeAutoInstall>
+
+    <!-- Additional CLI arguments -->
+    <TailbreezeAdditionalArgs Condition="'$(TailbreezeAdditionalArgs)' == ''"></TailbreezeAdditionalArgs>
+
+    <!-- Whether to compile Tailwind during build -->
+    <TailbreezeCompileOnBuild Condition="'$(TailbreezeCompileOnBuild)' == ''">true</TailbreezeCompileOnBuild>
+  </PropertyGroup>
+
+</Project>

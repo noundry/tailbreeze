@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.11" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- BlazorWasm only needs the build package for compile-time CSS generation -->
+    <ProjectReference Include="..\..\src\Tailbreeze.Build\Tailbreeze.Build.csproj" />
+  </ItemGroup>
+
+</Project>

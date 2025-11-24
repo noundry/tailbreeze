@@ -1,0 +1,45 @@
+@using Microsoft.Extensions.Options
+@using Microsoft.Extensions.Hosting
+@inject IOptions<TailbreezeOptions> Options
+@inject IHostEnvironment Environment
+
+<link rel="stylesheet" href="@GetHref()" data-tailbreeze="@Environment.IsDevelopment()" />
+
+@if (CdnFallback && Environment.IsDevelopment())
+{
+    <script>
+        // Tailbreeze CDN fallback
+        (function() {
+            var link = document.querySelector('link[data-tailbreeze]');
+            if (link) {
+                link.onerror = function() {
+                    console.warn('Tailbreeze: Loading Tailwind CSS from CDN fallback');
+                    var cdn = document.createElement('script');
+                    cdn.src = '@GetCdnUrl()';
+                    document.head.appendChild(cdn);
+                };
+            }
+        })();
+    </script>
+}
+
+@code {
+    /// <summary>
+    /// Gets or sets whether to enable CDN fallback.
+    /// </summary>
+    [Parameter]
+    public bool CdnFallback { get; set; } = true;
+
+    private string GetHref()
+    {
+        return Options.Value.ServePath;
+    }
+
+    private string GetCdnUrl()
+    {
+        var version = TailwindVersion.Parse(Options.Value.TailwindVersion);
+        return version.IsV4
+            ? "https://cdn.tailwindcss.com/4.0.0-alpha.32"
+            : "https://cdn.tailwindcss.com";
+    }
+}

@@ -1,0 +1,51 @@
+<Project>
+
+  <UsingTask TaskName="Tailbreeze.Build.Tasks.CompileTailwindTask" AssemblyFile="$(MSBuildThisFileDirectory)..\lib\netstandard2.0\Tailbreeze.Build.dll" />
+
+  <!-- Compile Tailwind CSS before build if enabled -->
+  <Target Name="TailbreezeCompile"
+          BeforeTargets="Build"
+          Condition="'$(TailbreezeCompileOnBuild)' == 'true' And '$(DesignTimeBuild)' != 'true'">
+
+    <PropertyGroup>
+      <_TailbreezeInputFullPath>$(MSBuildProjectDirectory)\$(TailbreezeInputCss)</_TailbreezeInputFullPath>
+      <_TailbreezeOutputFullPath>$(MSBuildProjectDirectory)\wwwroot\$(TailbreezeOutputCss)</_TailbreezeOutputFullPath>
+      <_TailbreezeConfigFullPath>$(MSBuildProjectDirectory)\$(TailbreezeConfigPath)</_TailbreezeConfigFullPath>
+    </PropertyGroup>
+
+    <CompileTailwindTask
+      InputPath="$(_TailbreezeInputFullPath)"
+      OutputPath="$(_TailbreezeOutputFullPath)"
+      ConfigPath="$(_TailbreezeConfigFullPath)"
+      Version="$(TailbreezeTailwindVersion)"
+      Minify="$(TailbreezeMinify)"
+      AutoInstall="$(TailbreezeAutoInstall)"
+      AdditionalArguments="$(TailbreezeAdditionalArgs)"
+      ProjectDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+
+  <!-- Compile and minify Tailwind CSS during publish -->
+  <Target Name="TailbreezePublish"
+          BeforeTargets="Publish"
+          Condition="'$(DesignTimeBuild)' != 'true'">
+
+    <PropertyGroup>
+      <_TailbreezeInputFullPath>$(MSBuildProjectDirectory)\$(TailbreezeInputCss)</_TailbreezeInputFullPath>
+      <_TailbreezeOutputFullPath>$(MSBuildProjectDirectory)\wwwroot\$(TailbreezeOutputCss)</_TailbreezeOutputFullPath>
+      <_TailbreezeConfigFullPath>$(MSBuildProjectDirectory)\$(TailbreezeConfigPath)</_TailbreezeConfigFullPath>
+      <_TailbreezeMinifyValue Condition="'$(TailbreezeMinifyOnPublish)' == 'true'">true</_TailbreezeMinifyValue>
+      <_TailbreezeMinifyValue Condition="'$(TailbreezeMinifyOnPublish)' != 'true'">$(TailbreezeMinify)</_TailbreezeMinifyValue>
+    </PropertyGroup>
+
+    <CompileTailwindTask
+      InputPath="$(_TailbreezeInputFullPath)"
+      OutputPath="$(_TailbreezeOutputFullPath)"
+      ConfigPath="$(_TailbreezeConfigFullPath)"
+      Version="$(TailbreezeTailwindVersion)"
+      Minify="$(_TailbreezeMinifyValue)"
+      AutoInstall="$(TailbreezeAutoInstall)"
+      AdditionalArguments="$(TailbreezeAdditionalArgs)"
+      ProjectDirectory="$(MSBuildProjectDirectory)" />
+  </Target>
+
+</Project>
